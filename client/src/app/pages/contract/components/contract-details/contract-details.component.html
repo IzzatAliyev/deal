@@ -1,0 +1,51 @@
+<div *ngIf="contract">
+  <div class="row">
+    <div class="col-12">
+      <div class="card mb-2 mt-2">
+        <div class="card-header">
+          Contract details
+        </div>
+        <div class="card-body">
+          <table class="table table-hover">
+            <tbody>
+            <tr>
+              <th>id</th>
+              <td>{{contract.id}}</td>
+            </tr>
+            <tr>
+              <th>name</th>
+              <td>{{contract.name}}</td>
+            </tr>
+            <tr>
+              <th>contract type</th>
+              <td>{{contract.contractType}}</td>
+            </tr>
+            <tr>
+              <th>department</th>
+              <td>{{contract.department.name}}</td>
+            </tr>
+            <tr>
+              <th>dealer</th>
+              <td>{{contract.dealer.name}}</td>
+            </tr>
+            <tr>
+              <th>created</th>
+              <td>{{contract.created}}</td>
+            </tr>
+            <tr>
+              <th>updated</th>
+              <td>{{contract.updated}}</td>
+            </tr>
+            <tr>
+              <th>deletion mark</th>
+              <td>{{contract.deletionMark}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary" (click)="goBack()">back</button>
+  <button type="button" class="btn btn-warning" (click)="updateContract()">change</button>
+</div>

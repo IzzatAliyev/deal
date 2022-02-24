@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Numans');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html,body {
+  background: #0d1117;
+  background-size: cover;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+a.nav-item.nav-link {
+  color: #0d1117;
+}
+
+.sort {
+  cursor: pointer;
+  margin-right: 2em;
+}
+
+.fa {
+  margin-left: 0.5em;
+}
+
+.page-link {
+  height: 100%;
+  width: 3em;
+  text-align: center;
+}
+
+.dropdown-menu {
+  min-width: 2em !important;
+}
+
+
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+body, input[type="text"], button {
+  color: #888;
+  font-family: Cambria, Georgia;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div.card-body{
+  background-color: #161b22;
+}
+
+div.card-header {
+  background-color: #0d1117;
+}
+
+td,th{
+  color: grey;
+}
+
+td,th:hover{
+  color: white;
+}

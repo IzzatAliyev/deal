@@ -1,0 +1,77 @@
+delete from department_management;
+delete from contracts;
+delete from departments;
+delete from dealers;
+delete from managements;
+delete from users;
+
+insert into departments values (1, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CORP', 'Microsoft');
+insert into departments values (2, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'INC', 'RedHot');
+insert into departments values (3, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'IBC', 'Pivotell');
+insert into departments values (4, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'JV', 'Katamaran');
+insert into departments values (5, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CORP', 'LookUp');
+insert into departments values (6, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'INC', 'Mongo');
+insert into departments values (7, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'IBC', 'DKp');
+insert into departments values (8, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'JV', 'NBG');
+insert into departments values (9, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CORP', 'Cycles');
+insert into departments values (10, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'INC', 'Lakma');
+insert into departments values (11, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'IBC', 'Foundation');
+insert into departments values (12, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'JV', 'Solution');
+insert into departments values (13, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CORP', 'Botman');
+insert into departments values (14, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'INC', 'Celulit');
+insert into departments values (15, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CORP', 'KatKit');
+
+insert into dealers values (1, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CLIENT', '122459167953', 'Bruce Lee');
+insert into dealers values (2, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'SUPPLIER', '239721399244', 'Steve Jobs');
+insert into dealers values (3, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CLIENT', '674622929999', 'Donald Tramp');
+insert into dealers values (4, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CLIENT', '349222723719', 'John Armstrong');
+insert into dealers values (5, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'SUPPLIER', '234915257497', 'Taras Shevchenko');
+insert into dealers values (6, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CLIENT', '569249653292', 'Lesya Ukrainka');
+insert into dealers values (7, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'SUPPLIER', '6324255224969', 'Tim Cook');
+insert into dealers values (8, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CLIENT', '124794169968', 'Silvester Stalone');
+insert into dealers values (9, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'SUPPLIER', '599442799667', 'Loma Vasilchenko');
+insert into dealers values (10, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CLIENT', '769569959472', 'Marc Obama');
+insert into dealers values (11, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CLIENT', '944989950205', 'George Anser');
+insert into dealers values (12, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'SUPPLIER', '121544062296', 'Donald McDonald');
+insert into dealers values (13, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'SUPPLIER', '924611697206', 'George McGeorge');
+insert into dealers values (14, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CLIENT', '412481044095', 'Sam Smith');
+insert into dealers values (15, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'SUPPLIER', '690949926702', 'Mark Tven');
+
+insert into contracts values (1, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CLIENT_CONTRACT', 'Contract 001', 2, 3);
+insert into contracts values (2, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CLIENT_CONTRACT', 'Contract 002', 2, 4);
+insert into contracts values (3, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CLIENT_CONTRACT', 'Contract 003', 2, 6);
+insert into contracts values (4, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CLIENT_CONTRACT', 'Contract 004', 8, 14);
+insert into contracts values (5, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CLIENT_CONTRACT', 'Contract 005', 8, 11);
+insert into contracts values (6, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CLIENT_CONTRACT', 'Contract 006', 13, 10);
+insert into contracts values (7, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'SUPPLIER_CONTRACT', 'Contract 007', 13, 12);
+insert into contracts values (8, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'SUPPLIER_CONTRACT', 'Contract 008', 13, 14);
+insert into contracts values (9, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'SUPPLIER_CONTRACT', 'Contract 009', 13, 9);
+insert into contracts values (10, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'SUPPLIER_CONTRACT', 'Contract 010', 2, 2);
+insert into contracts values (11, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'SUPPLIER_CONTRACT', 'Contract 011', 7, 9);
+insert into contracts values (12, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'SUPPLIER_CONTRACT', 'Contract 012', 6, 5);
+insert into contracts values (13, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CLIENT_CONTRACT', 'Contract 013', 13, 11);
+insert into contracts values (14, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CLIENT_CONTRACT', 'Contract 014', 13, 13);
+insert into contracts values (15, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'CLIENT_CONTRACT', 'Contract 015', 13, 14);
+
+insert into managements values (1, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'Computer');
+insert into managements values (2, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'IT');
+insert into managements values (3, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'Science');
+insert into managements values (4, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'Network');
+insert into managements values (5, CURRENT_TIMESTAMP(), false, CURRENT_TIMESTAMP(), 'SolutionXX');
+
+insert into department_management values (2, 2);
+insert into department_management values (5, 2);
+insert into department_management values (2, 14);
+insert into department_management values (5, 13);
+insert into department_management values (4, 14);
+insert into department_management values (1, 6);
+insert into department_management values (1, 7);
+insert into department_management values (5, 8);
+insert into department_management values (3, 9);
+insert into department_management values (1, 10);
+insert into department_management values (3, 1);
+insert into department_management values (5, 1);
+
+insert into users values ('PERSONAL', 1, '2021-12-28 17:08:57', false, '2021-12-28 17:08:57', 'admin@gmail.com', true, '$2a$12$dFkOQ4cyVrLSxTxXtwP88OwzMH6pIttLSlN.7h1OnfkvvN.9QFtxS', 'ROLE_ADMIN', '1998-05-18 00:00:00', 'Admin', 'Admin');
+insert into users values ('PERSONAL', 2, '2021-12-28 17:08:57', false, '2021-12-28 17:08:57', 'seller@gmail.com', true, '$2a$12$dFkOQ4cyVrLSxTxXtwP88OwzMH6pIttLSlN.7h1OnfkvvN.9QFtxS', 'ROLE_SELLER_MANAGER', '1995-02-12 00:00:00', 'Seller', 'Manager');
+insert into users values ('PERSONAL', 3, '2021-12-28 17:08:57', false, '2021-12-28 17:08:57', 'buyer@gmail.com', true, '$2a$12$dFkOQ4cyVrLSxTxXtwP88OwzMH6pIttLSlN.7h1OnfkvvN.9QFtxS', 'ROLE_BUYER_MANAGER', '1990-09-11 00:00:00', 'Buyer', 'Manager');

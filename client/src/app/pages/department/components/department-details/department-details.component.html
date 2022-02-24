@@ -1,0 +1,64 @@
+<div *ngIf="department">
+  <div class="row">
+    <div class="col-12">
+      <div class="card mb-2 mt-2">
+        <div class="card-header">
+          Department details
+        </div>
+        <div class="card-body">
+          <table class="table table-sm">
+            <tbody>
+            <tr>
+              <th>id</th>
+              <td>{{department.id}}</td>
+            </tr>
+            <tr>
+              <th>name</th>
+              <td>{{department.name}}</td>
+            </tr>
+            <tr>
+              <th>department type</th>
+              <td>{{department.departmentType}}</td>
+            </tr>
+            <tr>
+              <th>created</th>
+              <td>{{department.created}}</td>
+            </tr>
+            <tr>
+              <th>updated</th>
+              <td>{{department.updated}}</td>
+            </tr>
+            <tr>
+              <th>deletion mark</th>
+              <td>{{department.deletionMark}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card mb-2 mt-2">
+        <div class="card-header">
+          Used in managements
+        </div>
+        <div class="card-body">
+          <table class="table table-hover">
+            <tbody>
+            <tr *ngFor="let management of department.managements">
+              <td>{{management.name}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-primary" (click)="goBack()">back</button>
+    <button type="button" class="btn btn-warning" (click)="updateDepartment()">change</button>
+    <button type="button" class="btn btn-primary" (click)="goToContracts()">contracts</button>
+  </div>
+</div>

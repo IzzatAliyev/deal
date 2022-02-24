@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card mb-2 mt-2">
+      <div class="card-header">
+        New management
+      </div>
+      <div class="card-body">
+        <form [formGroup]="managementForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" aria-describedby="name" formControlName="name" required>
+          </div>
+          <div formArrayName="departmentIds">
+            <label for="name">Departments</label>
+            <div class="form-group" *ngFor="let departmentSelect of getFormsControls()['controls']; let i = index">
+              <div class="input-group mb-3">
+                <select class="form-control" formControlName="{{i}}">
+                  <option *ngFor="let department of departments"
+                          value="{{department.id}}">{{department.name}}</option>
+                </select>
+                <button class="btn btn-danger" (click)="removeDepartment(i)">remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="d-grid gap-2 d-md-block">
+            <button class="btn btn-primary mt-4" [disabled]="managementForm.invalid" (click)="create()">Submit</button>
+            <button class="btn btn-warning mt-4" (click)="addDepartment()">Add department</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

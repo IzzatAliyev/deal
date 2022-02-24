@@ -1,0 +1,51 @@
+<div *ngIf="dealer">
+  <div class="row">
+    <div class="col-12">
+      <div class="card mb-2 mt-2">
+        <div class="card-header">
+          Dealer details
+        </div>
+        <div class="card-body">
+          <table class="table table-hover">
+            <tbody>
+            <tr>
+              <th>id</th>
+              <td>{{dealer.id}}</td>
+            </tr>
+            <tr>
+              <th>name</th>
+              <td>{{dealer.name}}</td>
+            </tr>
+            <tr>
+              <th>inn</th>
+              <td>{{dealer.inn}}</td>
+            </tr>
+            <tr>
+              <th>dealer type</th>
+              <td>{{dealer.dealerType}}</td>
+            </tr>
+            <tr>
+              <th>created</th>
+              <td>{{dealer.created}}</td>
+            </tr>
+            <tr>
+              <th>updated</th>
+              <td>{{dealer.updated}}</td>
+            </tr>
+            <tr>
+              <th>deletion mark</th>
+              <td>{{dealer.deletionMark}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-primary" (click)="goBack()">back</button>
+    <button type="button" class="btn btn-warning" (click)="updateDealer()">change</button>
+    <button type="button" class="btn btn-primary" (click)="goToContracts()">contracts</button>
+  </div>
+
+</div>

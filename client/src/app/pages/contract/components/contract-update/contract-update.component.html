@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card mb-2 mt-2">
+      <div class="card-header">
+        Update contract
+      </div>
+      <div class="card-body">
+        <form [formGroup]="contractForm" (ngSubmit)="update()">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" aria-describedby="name" formControlName="name" required>
+          </div>
+          <div class="form-group">
+            <label for="contractType">Select contract type</label>
+            <select class="form-control" id="contractType" aria-describedby="contractType" formControlName="contractType" required>
+              <option *ngFor="let type of contractTypes"
+                      value="{{type}}">{{type}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="departmentId">Select department</label>
+            <select class="form-control" id="departmentId" aria-describedby="departmentId" formControlName="departmentId" required>
+              <option *ngFor="let department of departments"
+                      value="{{department.id}}">{{department.name}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dealerId">Select dealer</label>
+            <select class="form-control" id="dealerId" aria-describedby="dealerId" formControlName="dealerId" required>
+              <option *ngFor="let dealer of dealers"
+                      value="{{dealer.id}}">{{dealer.name}}</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary mt-4" [disabled]="contractForm.invalid">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
