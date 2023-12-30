@@ -1,0 +1,36 @@
+version: "3"
+services:
+  frontend:
+    container_name: client
+    build: client/
+    ports:
+      - "4200:4200"
+    networks:
+      - backend
+  server:
+    container_name: server
+    build: server/
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - backend
+  db:
+    container_name: mysql-database
+    image: 'mysql:8.0.33'
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_DATABASE: "deal"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "undi"
+      MYSQL_ROOT_PASSWORD: "undi"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+    networks:
+      - backend
+networks:
+  backend:
+    driver: bridge
